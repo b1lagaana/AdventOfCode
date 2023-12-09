@@ -23,6 +23,13 @@ def day01_task01(data):
 def day01_task02(data):
     sum = 0
     help_dict = {
+        'oneight': '18',
+        'threeight': '38',
+        'fiveight': '58',
+        'sevenine': '79',
+        'eightwo': '82',
+        'eighthree': '83',
+        'nineight': '98',
         'one': '1',
         'two': '2',
         'three': '3',
@@ -32,14 +39,7 @@ def day01_task02(data):
         'seven': '7',
         'eight': '8',
         'nine': '9',
-        'zero': '0',
-        'oneight': '18',
-        'threeight': '38',
-        'fiveight': '58',
-        'sevenine': '79',
-        'eightwo': '82',
-        'eighthree': '83',
-        'nineight': '98'
+        'zero': '0'
     }
 
     for line in data.readlines():
