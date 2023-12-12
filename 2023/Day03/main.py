@@ -12,9 +12,6 @@ def day03_task01(data):
     for d in data:
         matrix.append((' '.join(d).split("\n")[0]).split(" "))
 
-        for nb in (re.findall(('[0-9]*'), ''.join(d))):
-            if nb.isdigit():
-                print(nb)
         try:
             counter
         except NameError:
@@ -54,9 +51,7 @@ def day03_task01(data):
                     nb_matrix.append(".")
             else:
                 wr_vals = False
-                nb_range = 0
                 nb_matrix.append(".")
-
 
     numbers_find = re.findall(('[0-9]*'), ''.join(nb_matrix))
 
@@ -66,9 +61,9 @@ def day03_task01(data):
 
         if n.isdigit():
             sum = sum + int(n)
-            #print(n)
 
-    print(sum)
+    print("The answer to Day 03 Task 01 is: ", sum)
+
 
 
 def trailing_numbers(matrix, y, x):
@@ -96,7 +91,7 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y-1][r-1].isprintable() and not (matrix[y-1][r-1].isdigit() or matrix[y-1][r-1] == "."):
+            if matrix[y-1][r-1].isprintable() and matrix[y-1][r-1] != "" and not (matrix[y-1][r-1].isdigit() or matrix[y-1][r-1] == "."):
                 count = True
 
         try:
@@ -104,7 +99,7 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y-1][r].isprintable() and not (matrix[y-1][r].isdigit() or matrix[y-1][r] == "."):
+            if matrix[y-1][r].isprintable() and matrix[y-1][r] != "" and not (matrix[y-1][r].isdigit() or matrix[y-1][r] == "."):
                 count = True
 
         try:
@@ -112,7 +107,7 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y-1][r+1].isprintable() and not (matrix[y-1][r+1].isdigit() or matrix[y-1][r+1] == "."):
+            if matrix[y-1][r+1].isprintable() and matrix[y-1][r+1] != ""  and not (matrix[y-1][r+1].isdigit() or matrix[y-1][r+1] == "."):
                 count = True
 
         try:
@@ -120,7 +115,7 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y][r-1].isprintable() and not (matrix[y][r-1].isdigit() or matrix[y][r-1] == "."):
+            if matrix[y][r-1].isprintable() and matrix[y][r-1] != ""  and not (matrix[y][r-1].isdigit() or matrix[y][r-1] == "."):
                 count = True
 
         try:
@@ -128,7 +123,7 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y][r+1].isprintable() and not (matrix[y][r+1].isdigit() or matrix[y][r+1] == "."):
+            if matrix[y][r+1].isprintable() and matrix[y][r+1] != ""  and not (matrix[y][r+1].isdigit() or matrix[y][r+1] == "."):
                 count = True
 
         try:
@@ -136,7 +131,7 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y+1][r-1].isprintable() and not (matrix[y+1][r-1].isdigit() or matrix[y+1][r-1] == "."):
+            if matrix[y+1][r-1].isprintable() and matrix[y+1][r-1] != ""  and not (matrix[y+1][r-1].isdigit() or matrix[y+1][r-1] == "."):
                 count = True
 
         try:
@@ -144,7 +139,7 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y+1][r].isprintable() and not (matrix[y+1][r].isdigit() or matrix[y+1][r] == "."):
+            if matrix[y+1][r].isprintable() and matrix[y+1][r] != ""  and not (matrix[y+1][r].isdigit() or matrix[y+1][r] == "."):
                 count = True
 
         try:
@@ -152,13 +147,16 @@ def check_val(matrix, y, x, lst):
         except IndexError:
             pass
         else:
-            if matrix[y+1][r+1].isprintable() and not (matrix[y+1][r+1].isdigit() or matrix[y+1][r+1] == "."):
+            if matrix[y+1][r+1].isprintable() and matrix[y+1][r+1] != ""  and not (matrix[y+1][r+1].isdigit() or matrix[y+1][r+1] == "."):
                 count = True
     return count
 
 
+def day03_task02(matrix, nb_matrix):
+    pass
+
 
 day03_task01(file_data)
-#day03_task01(file_data_example_01)
+#day03_task01(file_data_example_00)
 #533775
 # 529166
