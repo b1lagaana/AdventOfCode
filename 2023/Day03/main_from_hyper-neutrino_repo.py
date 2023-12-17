@@ -1,3 +1,4 @@
+# review this again!
 
 grid = open("data.txt", "r").read().splitlines()
 
