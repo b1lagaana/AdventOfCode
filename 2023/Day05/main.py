@@ -3,6 +3,7 @@ file_data_02 = open("data.txt", "r")
 file_data_example_01 = open("example_01.txt", "r")
 file_data_example_02 = open("example_02.txt", "r")
 
+
 # Task number one
 ## get different lists
 list_data = []
