@@ -96,15 +96,3 @@ def calulate_location(s, list_map):
         mapped = s
 
     return mapped
-
-def day05_task01(sum):
-    print("The result of Task 01 on Day 05 is:", sum)
-
-def day05_task02(sum):
-    print("The result of Task 02 on Day 05 is:", sum)
-    print("84470622 was too high, beware calculate via server for task 1 - with actual data")
-
-
-
-get_lists(file_data)
-#get_lists(file_data_example_00)
