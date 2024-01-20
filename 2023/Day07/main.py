@@ -169,4 +169,3 @@ print(int(sum))
 # check out max value of cards
 
 # get rank of hand, multiply rank with bid for hand and add all set of hands winnings together
-
